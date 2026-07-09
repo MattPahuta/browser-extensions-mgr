@@ -1,9 +1,56 @@
 function Header() {
   return (
-    <header className="">
-      <div className=""></div>
+    <header className="mb-10 md:mb-16">
+      <div className="max-w-6xl mx-auto py-2 px-3 flex items-center justify-between bg-brand-neutral-000 border border-brand-neutral-200 dark:bg-brand-neutral-800 dark:border-0 rounded-xl shadow-lg">
+        <div className="flex items-center gap-2">
+          <svg
+            aria-hidden="true"
+            focusable="false"
+            width="40"
+            height="40"
+            viewBox="0 0 40 40"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              className="fill-brand-red-700 dark:fill-brand-red-400"
+              fillRule="evenodd"
+              clipRule="evenodd"
+              d="M13.7146 0C11.4582 0 9.2943 0.896337 7.69881 2.49183L0 10.1906V13.7146C0 16.2043 1.06944 18.4442 2.77401 20C1.06944 21.5558 0 23.7957 0 26.2854V29.8094L7.69881 37.5082C9.2943 39.1037 11.4582 40 13.7146 40C16.2043 40 18.4442 38.9306 20 37.226C21.5558 38.9306 23.7957 40 26.2854 40C28.5418 40 30.7057 39.1037 32.3012 37.5082L40 29.8094V26.2854C40 23.7957 38.9306 21.5558 37.226 20C38.9306 18.4442 40 16.2043 40 13.7146V10.1906L32.3012 2.49183C30.7057 0.896337 28.5418 0 26.2854 0C23.7957 0 21.5558 1.06944 20 2.77401C18.4442 1.06944 16.2043 0 13.7146 0ZM25.7588 20C25.6629 19.9125 25.5688 19.8226 25.4766 19.7304L20 14.2538L14.5234 19.7304C14.4312 19.8226 14.3371 19.9125 14.2412 20C14.3371 20.0875 14.4312 20.1774 14.5234 20.2696L20 25.7462L25.4766 20.2696C25.5688 20.1774 25.6629 20.0875 25.7588 20ZM22.2222 29.8094V31.4924C22.2222 33.7364 24.0414 35.5556 26.2854 35.5556C27.363 35.5556 28.3965 35.1275 29.1585 34.3655L35.5556 27.9684V26.2854C35.5556 24.0414 33.7364 22.2222 31.4924 22.2222C30.4148 22.2222 29.3813 22.6503 28.6193 23.4123L22.2222 29.8094ZM17.7778 29.8094L11.3807 23.4123C10.6187 22.6503 9.58524 22.2222 8.50762 22.2222C6.26359 22.2222 4.44444 24.0414 4.44444 26.2854V27.9684L10.8415 34.3655C11.6035 35.1275 12.637 35.5556 13.7146 35.5556C15.9586 35.5556 17.7778 33.7364 17.7778 31.4924V29.8094ZM17.7778 8.50762V10.1906L11.3807 16.5877C10.6187 17.3497 9.58524 17.7778 8.50762 17.7778C6.26359 17.7778 4.44444 15.9586 4.44444 13.7146V12.0316L10.8415 5.63452C11.6035 4.87253 12.637 4.44445 13.7146 4.44445C15.9586 4.44445 17.7778 6.26359 17.7778 8.50762ZM28.6193 16.5877L22.2222 10.1906V8.50762C22.2222 6.26359 24.0414 4.44445 26.2854 4.44445C27.363 4.44445 28.3965 4.87253 29.1585 5.63452L35.5556 12.0316V13.7146C35.5556 15.9586 33.7364 17.7778 31.4924 17.7778C30.4148 17.7778 29.3813 17.3497 28.6193 16.5877Z"
+            />
+          </svg>
+          <h1 className="text-2xl font-bold text-brand-neutral-900 dark:text-white leading-tight">
+            Extensions
+          </h1>
+        </div>
+        <button
+          type="button"
+          aria-label="Switch to dark mode"
+          className="min-h-12.5 min-w-12.5 inline-flex items-center justify-center bg-brand-neutral-100 dark:bg-brand-neutral-700 rounded-xl cursor-pointer hover:bg-brand-neutral-300 dark:hover:bg-brand-neutral-600 focus-visible:outline-2 focus-visible:outline-brand-red-700 dark:focus-visible:outline-brand-red-400 outline-offset-2 transition">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="22"
+            height="22"
+            fill="none"
+            viewBox="0 0 22 22">
+            <g clipPath="url(#a)">
+              <path
+                stroke="#091540"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="1.98"
+                d="M20.125 11.877A7.333 7.333 0 1 1 10.124 1.875a9.168 9.168 0 1 0 10.001 10.002Z"
+              />
+            </g>
+            <defs>
+              <clipPath id="a">
+                <path fill="#fff" d="M0 0h22v22H0z" />
+              </clipPath>
+            </defs>
+          </svg>
+        </button>
+      </div>
     </header>
-  )
+  );
 }
 
 export default Header;
