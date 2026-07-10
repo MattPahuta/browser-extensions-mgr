@@ -1,3 +1,5 @@
+import ModeToggle from "./ThemeToggle";
+
 function Header() {
   return (
     <header className="mb-10 md:mb-16">
@@ -22,32 +24,7 @@ function Header() {
             Extensions
           </h1>
         </div>
-        <button
-          type="button"
-          aria-label="Switch to dark mode"
-          className="min-h-12.5 min-w-12.5 inline-flex items-center justify-center bg-brand-neutral-100 dark:bg-brand-neutral-700 rounded-xl cursor-pointer hover:bg-brand-neutral-300 dark:hover:bg-brand-neutral-600 focus-visible:outline-2 focus-visible:outline-brand-red-700 dark:focus-visible:outline-brand-red-400 outline-offset-2 transition">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="22"
-            height="22"
-            fill="none"
-            viewBox="0 0 22 22">
-            <g clipPath="url(#a)">
-              <path
-                stroke="#091540"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="1.98"
-                d="M20.125 11.877A7.333 7.333 0 1 1 10.124 1.875a9.168 9.168 0 1 0 10.001 10.002Z"
-              />
-            </g>
-            <defs>
-              <clipPath id="a">
-                <path fill="#fff" d="M0 0h22v22H0z" />
-              </clipPath>
-            </defs>
-          </svg>
-        </button>
+        <ModeToggle />
       </div>
     </header>
   );
