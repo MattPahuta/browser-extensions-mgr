@@ -2,6 +2,7 @@ import { useState } from "react";
 import extenstionsData from "./data/data.json";
 
 import Header from "./components/Header";
+import ExtensionCard from "./components/ExtensionCard";
 
 // App-level state responsibilities (kept here so it can be passed down to cards & filters):
 // - extensions: array of extension objects loaded from local JSON (id, name, enabled, ...)
@@ -18,31 +19,14 @@ function App() {
     <div className="py-5 px-4">
       <Header />
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl text-brand-neutral-900 dark:text-brand-neutral-000 font-semibold">
+        <h2 className="mb-10 text-4xl text-brand-neutral-900 dark:text-brand-neutral-000 font-semibold">
           Extensions List
         </h2>
         {/* extensions grid - will be ul with li's (cards) */}
         {/* <div className="grid gap-1 grid-cols-[repeat(auto-fit, minmax(min(340px,_100%),1fr))]"> */}
-        <div className="grid gap-1 grid-cols-3">
+        <div className="grid gap-3 grid-cols-[repeat(auto-fit,minmax(min(330px,100%),1fr))]">
           {extensions.map((extension, index) => (
-            <div
-              key={index}
-              className="p-4 flex flex-col gap-1 bg-brand-neutral-000 rounded-xl">
-              {/* card content */}
-              <div className="grid">
-                <img src={extension.logo} alt="" />
-                <div>
-                  <h3>{extension.name}</h3>
-                  <p className="">{extension.description}</p>
-                </div>
-              </div>
-              {/* controls */}
-              <div className="flex items-center justify-between">
-                <button>Remove</button>
-                <label htmlFor=""></label>
-                <input type="checkbox" name="" id="" />
-              </div>
-            </div>
+            <ExtensionCard key={index} extension={extension} />
           ))}
         </div>
       </div>
