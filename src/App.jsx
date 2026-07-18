@@ -19,9 +19,14 @@ function App() {
     <div className="py-5 px-4">
       <Header />
       <div className="max-w-6xl mx-auto">
-        <h2 className="mb-10 text-4xl text-brand-neutral-900 dark:text-brand-neutral-000 font-semibold">
-          Extensions List
-        </h2>
+        <div className="flex flex-col sm:flex-row items-center sm:justify-between">
+          <h2 className="mb-10 text-4xl text-brand-neutral-900 dark:text-brand-neutral-000 font-semibold">
+            Extensions List
+          </h2>
+          <div>
+            
+          </div>
+        </div>
         {/* extensions grid - will be ul with li's (cards) */}
         {/* <div className="grid gap-1 grid-cols-[repeat(auto-fit, minmax(min(340px,_100%),1fr))]"> */}
         <div className="grid gap-3 grid-cols-[repeat(auto-fit,minmax(min(330px,100%),1fr))]">
