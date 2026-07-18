@@ -4,19 +4,19 @@ function ExtensionCard({ extension }) {
 
   return (
     <div
-      className="min-h-50 p-5 flex flex-col bg-brand-neutral-000 rounded-xl shadow-md">
+      className="min-h-50 p-5 flex flex-col bg-brand-neutral-000 dark:bg-brand-neutral-800 rounded-[20px] shadow-md dark:border dark:border-brand-neutral-600">
       {/* extension info */}
       <div className="flex gap-4">
         {/* icon image 60x60px */}
         <img src={icons[extension.logo]} alt="" className="size-15 object-cover" />
         <div>
-          <h3 className="mb-1 text-xl font-bold text-brand-neutral-900">{extension.name}</h3>
-          <p className="text-brand-neutral-600">{extension.description}</p>
+          <h3 className="mb-1 text-xl font-bold text-brand-neutral-900 dark:text-brand-neutral-000">{extension.name}</h3>
+          <p className="text-brand-neutral-600 dark:text-brand-neutral-300">{extension.description}</p>
         </div>
       </div>
       {/* extension actions */}
       <div className="mt-auto flex items-center justify-between">
-        <button className="py-2 px-4 inline-flex items-center justify-center text-brand-neutral-900 font-medium border border-brand-neutral-300 rounded-full">Remove</button>
+        <button className="py-2 px-4 inline-flex items-center justify-center text-brand-neutral-900 dark:text-brand-neutral-000 font-medium border border-brand-neutral-300 dark:border-brand-neutral-600 rounded-full cursor-pointer hover:text-brand-neutral-000 dark:hover:text-brand-neutral-900 hover:bg-brand-red-700 dark:hover:bg-brand-red-400 hover:border-brand-red-700 dark:hover:border-brand-red-400 focus-visible:outline-2 outline-offset-2 focus-visible:outline-brand-red-700 dark:focus-visible:outline-brand-red-400 transition">Remove</button>
         <label htmlFor=""></label>
         <input type="checkbox" name="" id="" />
       </div>
