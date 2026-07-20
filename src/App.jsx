@@ -16,6 +16,26 @@ function App() {
 
   console.log(extensions);
 
+  function filterExtensions(filter) {
+    switch (filter) {
+      case "all":
+        return extensions;
+      case "active":
+        return extensions.filter((extension) => extension.isActive);
+      case "inactive":
+        return extensions.filter((extension) => !extension.isActive);
+      default:
+        return extensions;
+    }
+  }
+
+  function handleRemove(id) {
+    console.log("Removing extension ID: ", id)
+    setExtensions((prevExtensions) =>
+      prevExtensions.filter((extension) => extension.id !== parseInt(id))
+    );
+  }
+
   function handleToggle(id) {
     console.log("Toggling extension ID: ", id)
     setExtensions((prevExtensions) =>
@@ -39,6 +59,7 @@ function App() {
               key={index}
               extension={extension}
               onToggle={handleToggle}
+              onRemove={handleRemove}
             />
           ))}
         </div>
