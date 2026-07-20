@@ -16,16 +16,30 @@ function App() {
 
   console.log(extensions);
 
+  function handleToggle(id) {
+    console.log("Toggling extension ID: ", id)
+    setExtensions((prevExtensions) =>
+      prevExtensions.map((extension) =>
+        extension.id === parseInt(id)
+          ? { ...extension, isActive: !extension.isActive }
+          : extension,
+      ),
+    );
+  }
+
   return (
     <div className="py-5 px-4">
       <Header />
       <main className="max-w-6xl mx-auto">
         <ControlBar />
         {/* extensions grid - will be ul with li's (cards) */}
-        {/* <div className="grid gap-1 grid-cols-[repeat(auto-fit, minmax(min(340px,_100%),1fr))]"> */}
         <div className="grid gap-3 grid-cols-[repeat(auto-fit,minmax(min(330px,100%),1fr))]">
           {extensions.map((extension, index) => (
-            <ExtensionCard key={index} extension={extension} />
+            <ExtensionCard
+              key={index}
+              extension={extension}
+              onToggle={handleToggle}
+            />
           ))}
         </div>
       </main>

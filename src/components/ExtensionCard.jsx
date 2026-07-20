@@ -1,6 +1,7 @@
+
 import { icons } from "../data/icons";
 
-function ExtensionCard({ extension }) {
+function ExtensionCard({ extension, onToggle }) {
 
   return (
     <div className="min-h-50 p-5 flex flex-col bg-brand-neutral-000 dark:bg-brand-neutral-800 rounded-[20px] shadow-md dark:border dark:border-brand-neutral-600">
@@ -29,15 +30,19 @@ function ExtensionCard({ extension }) {
           Remove
         </button>
         <label
-          htmlFor=""
-          className="switch relative inline-block w-9 h-5">
+          htmlFor={extension.id}
+          className="switch relative inline-block w-9 h-5 rounded-full focus-within:outline-2 focus-within:outline-offset-2 outline-brand-red-500 dark:outline-brand-red-400">
           <input
             type="checkbox"
-            name=""
-            id=""
+            id={extension.id}
+            checked={extension.isActive}
+            onChange={(event) => {
+              onToggle(event.target.id);
+            }}
             className="opacity-0 w-0 h-0"
           />
-          <span className="slider round absolute inset-0 rounded-full bg-brand-neutral-300 dark:bg-brand-neutral-600 before:absolute before:content-[''] before:size-4 before:bg-brand-neutral-000 before:rounded-full before:left-0.5 before:top-0.5 cursor-pointer transition"></span>
+          <span
+            className={`slider round absolute inset-0 rounded-full ${extension.isActive ? "bg-brand-red-700 dark:bg-brand-red-400 before:translate-x-4" : "bg-brand-neutral-300 dark:bg-brand-neutral-600"} before:absolute before:content-[''] before:size-4 before:bg-brand-neutral-000 before:rounded-full before:left-0.5 before:top-0.5 transition cursor-pointer before:transition-transform before:duration-300`}></span>
         </label>
       </div>
     </div>
