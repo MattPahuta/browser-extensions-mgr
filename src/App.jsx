@@ -13,20 +13,24 @@ import ExtensionCard from "./components/ExtensionCard";
 
 function App() {
   const [extensions, setExtensions] = useState(extenstionsData); // primary data (source of truth)
+  const [filter, setFilter] = useState("all"); // current filter state
 
   console.log(extensions);
 
-  function filterExtensions(filter) {
+  const visibleExtensions = extensions.filter(ext => {
     switch (filter) {
-      case "all":
-        return extensions;
       case "active":
-        return extensions.filter((extension) => extension.isActive);
+        return ext.isActive;
       case "inactive":
-        return extensions.filter((extension) => !extension.isActive);
+        return !ext.isActive;
       default:
-        return extensions;
+        return true;
     }
+  });
+
+  function handleFilterChange(newFilter) {
+    console.log("Filter changed to: ", newFilter)
+    setFilter(newFilter);
   }
 
   function handleRemove(id) {
@@ -51,10 +55,10 @@ function App() {
     <div className="py-5 px-4">
       <Header />
       <main className="max-w-6xl mx-auto">
-        <ControlBar />
+        <ControlBar onFilterChange={handleFilterChange} />
         {/* extensions grid - will be ul with li's (cards) */}
         <div className="grid gap-3 grid-cols-[repeat(auto-fit,minmax(min(330px,100%),1fr))]">
-          {extensions.map((extension, index) => (
+          {visibleExtensions.map((extension, index) => (
             <ExtensionCard
               key={index}
               extension={extension}
