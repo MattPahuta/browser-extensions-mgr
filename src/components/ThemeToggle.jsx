@@ -55,9 +55,13 @@ function ModeToggle() {
     <button
       type="button"
       onClick={() => toggleTheme()}
-      aria-label="Switch to dark mode"
       className="min-h-12.5 min-w-12.5 inline-flex items-center justify-center bg-brand-neutral-100 dark:bg-brand-neutral-700 rounded-xl cursor-pointer hover:bg-brand-neutral-300 dark:hover:bg-brand-neutral-600 focus-visible:outline-2 focus-visible:outline-brand-red-700 dark:focus-visible:outline-brand-red-400 outline-offset-2 transition">
-      {theme === "light" ? moonIcon : sunIcon }
+      {theme === "light" ? moonIcon : sunIcon}
+      <span className="sr-only">
+        {theme === "light"
+          ? "Activate dark mode"
+          : "Activate light mode"}
+      </span>
     </button>
   );
 }

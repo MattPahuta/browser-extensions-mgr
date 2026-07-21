@@ -4,11 +4,9 @@ import Header from "./components/Header";
 import ControlBar from "./components/ControlBar";
 import ExtensionCard from "./components/ExtensionCard";
 
-
 function App() {
-  const [extensions, setExtensions] = useState(extenstionsData); // primary data (source of truth)
-  const [filter, setFilter] = useState("all"); // current filter state
-
+  const [extensions, setExtensions] = useState(extenstionsData);
+  const [filter, setFilter] = useState("all");
 
   const visibleExtensions = extensions.filter(ext => {
     switch (filter) {
@@ -42,9 +40,9 @@ function App() {
   }
 
   return (
-    <div className="py-5 px-4">
+    <div className="py-5 sm:py-6 px-4 sm:px-8">
       <Header />
-      <main className="max-w-6xl mx-auto">
+      <main className="max-w-wrapper-max-width mx-auto">
         <ControlBar filter={filter} onFilterChange={handleFilterChange} />
         <div className="grid gap-3 grid-cols-[repeat(auto-fit,minmax(min(330px,100%),1fr))]">
           {visibleExtensions.map((extension, index) => (

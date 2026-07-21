@@ -3,9 +3,7 @@ import { icons } from "../data/icons";
 function ExtensionCard({ extension, onRemove, onToggle }) {
   return (
     <div className="min-h-50 p-5 flex flex-col bg-brand-neutral-000 dark:bg-brand-neutral-800 rounded-[20px] shadow-md dark:border dark:border-brand-neutral-600">
-      {/* extension info */}
       <div className="flex gap-4">
-        {/* icon image 60x60px */}
         <img
           src={icons[extension.logo]}
           alt=""
@@ -20,7 +18,6 @@ function ExtensionCard({ extension, onRemove, onToggle }) {
           </p>
         </div>
       </div>
-      {/* extension actions */}
       <div className="mt-auto flex items-center justify-between">
         <button
           onClick={() => {

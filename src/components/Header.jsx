@@ -2,8 +2,8 @@ import ModeToggle from "./ThemeToggle";
 
 function Header() {
   return (
-    <header className="mb-10 md:mb-16">
-      <div className="max-w-6xl mx-auto py-2 px-3 flex items-center justify-between bg-brand-neutral-000 border border-brand-neutral-200 dark:bg-brand-neutral-800 dark:border-0 rounded-xl shadow-lg">
+    <header className="mb-10 lg:mb-16">
+      <div className="max-w-wrapper-max-width mx-auto py-2 px-3 flex items-center justify-between bg-brand-neutral-000 border border-brand-neutral-200 dark:bg-brand-neutral-800 dark:border-0 rounded-xl shadow-md">
         <div className="flex items-center gap-2">
           <svg
             aria-hidden="true"

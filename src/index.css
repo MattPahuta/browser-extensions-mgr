@@ -6,6 +6,7 @@
 
 @theme {
   --font-noto-sans: "Noto Sans", sans-serif;
+  --spacing-wrapper-max-width: 1170px;
 
   --color-brand-neutral-900: hsl(227, 75%, 14%);
   --color-brand-neutral-800: hsl(226, 25%, 17%);
