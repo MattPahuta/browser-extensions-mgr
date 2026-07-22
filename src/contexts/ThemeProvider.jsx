@@ -1,7 +1,6 @@
 import { useEffect, useState, useCallback } from "react";
 import { ThemeContext } from "./ThemeContext";
 
-// helper function
 const getSystemTheme = () => {
   if (typeof window === "undefined") return "light";
   return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";

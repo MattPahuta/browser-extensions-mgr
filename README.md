@@ -11,11 +11,9 @@ This is a solution to the [Browser extensions manager UI challenge on Frontend M
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
+  - [Architecture & Key Decisions](#architecture--key-decisions)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -32,7 +30,9 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./src/assets/images/project-ss-dark.jpg)
+
+![](./src/assets/images/project-ss-light.jpg)
 
 ### Links
 
@@ -45,31 +45,14 @@ Users should be able to:
 
 - Semantic HTML5 markup
 - Accessible design principles
-- CSS custom properties
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
 - [Tailwindcss](https://tailwindcss.com/) - CSS framework
 - [Vite](https://vite.dev/) - Frontend build tool
 - [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
 
-### What I learned
-
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
+### Architecture & Key Decisions
 
 ```js
 const proudOfThisFunc = () => {
@@ -77,14 +60,11 @@ const proudOfThisFunc = () => {
 };
 ```
 
-### Continued development
-
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [A11Y Style Guide](https://a11y-style-guide.com/style-guide/section-forms.html) - This is generally a great resource for looking up all sorts of accessibility-related topics. I particularly appreciate how easy it is to navigate and find what I'm looking for. The section on Toggles helped a lot in streamlining my toggle switch markup and styles.
+- [React theming (dark mode) with Context API and Tailwind CSS](https://medium.com/@sandeepshome.dev/react-theming-dark-mode-with-context-api-and-tailwindcss-b3ef50a9522b) - There are a lot of small variations out there around how folks are implementing theme toggling with React Context. Each time I build a theme toggle, I feel it's just a bit different from the last. This is a nicely written and recent article on the topic.
 
 ## Author
 
@@ -92,7 +72,3 @@ Use this section to outline areas that you want to continue focusing on in futur
 - Frontend Mentor - [@mattpahuta](https://www.frontendmentor.io/profile/MattPahuta)
 - Bluesky - [@mattpahuta](https://bsky.app/profile/mattpahuta.bsky.social)
 - LinkedIn - [Matt Pahuta](www.linkedin.com/in/mattpahuta)
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
