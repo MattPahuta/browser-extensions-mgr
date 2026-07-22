@@ -8,7 +8,7 @@ function App() {
   const [extensions, setExtensions] = useState(extenstionsData);
   const [filter, setFilter] = useState("all");
 
-  const visibleExtensions = extensions.filter(ext => {
+  const visibleExtensions = extensions.filter((ext) => {
     switch (filter) {
       case "active":
         return ext.isActive;
@@ -25,14 +25,14 @@ function App() {
 
   function handleRemove(id) {
     setExtensions((prevExtensions) =>
-      prevExtensions.filter((extension) => extension.id !== parseInt(id))
+      prevExtensions.filter((extension) => extension.id !== id),
     );
   }
 
   function handleToggle(id) {
     setExtensions((prevExtensions) =>
       prevExtensions.map((extension) =>
-        extension.id === parseInt(id)
+        extension.id === id
           ? { ...extension, isActive: !extension.isActive }
           : extension,
       ),
@@ -43,11 +43,14 @@ function App() {
     <div className="py-5 sm:py-6 px-4 sm:px-8">
       <Header />
       <main className="max-w-wrapper-max-width mx-auto">
-        <ControlBar filter={filter} onFilterChange={handleFilterChange} />
+        <ControlBar
+          filter={filter}
+          onFilterChange={handleFilterChange}
+        />
         <div className="grid gap-3 grid-cols-[repeat(auto-fit,minmax(min(330px,100%),1fr))]">
-          {visibleExtensions.map((extension, index) => (
+          {visibleExtensions.map((extension) => (
             <ExtensionCard
-              key={index}
+              key={extension.id}
               extension={extension}
               onToggle={handleToggle}
               onRemove={handleRemove}
