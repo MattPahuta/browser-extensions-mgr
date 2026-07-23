@@ -39,8 +39,8 @@ Users should be able to:
 
 ### Links
 
-- [Frontend Mentor solution page](https://your-solution-url.com)
-- [live demo site](https://browser-extensions-iowx8zxv9-matt-pahuta-dev.vercel.app/)
+- [Frontend Mentor solution page](https://www.frontendmentor.io/solutions/responsive-browser-extensions-manager-ui-built-with-react-sXZbYJiswa)
+- [live demo site](https://browser-extensions-mgr.vercel.app/)
 
 ## My process
 
